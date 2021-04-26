@@ -1,0 +1,134 @@
+.login-div {
+    margin: 40px;
+    width: 70%;
+    /* height: 530px; */
+    padding: 60px 35px 35px 35px;
+    border-radius: 40px;
+    background: #ebf5fc;
+    box-shadow: -6px -6px 20px rgba(255,255,255,1),
+                6px 6px 20px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: 'Orelega One', cursive;
+    color: #FFC400;
+    font-size: 28px;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin: 0 auto;
+    box-shadow: 0 0 2px #5f5f5f,
+                0 0 0 5px #ecf0f3,
+                8px 8px 15px #a9aaaf,
+                -8px -8px 15px #fff;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Handlee', cursive;
+    padding-top: 19px;
+    color: rgb(85, 85, 85);
+    font-style: italic;
+}
+
+@media screen and (max-width: 440px) {
+    .subtitle{
+      font-size: 17px;
+    }
+  }
+
+.fields {
+    width: 100%;
+    padding: 75px 5px 5px 5px;
+}
+
+.fields input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+}
+
+@media screen and (max-width: 440px) {
+    .fields input{
+      font-size: 12px;
+      padding: 6px;
+      margin: 5px;
+    }
+  }
+
+.email,
+.password {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #fff;
+}
+
+.fields .icons {
+    font-size: 20px;
+    color: #555;
+    margin: 0 0px -3px 25px;
+}
+
+@media screen and (max-width: 470px) {
+    .fields .icons{
+      font-size: 9px;
+    }
+  }
+
+.signin-btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    background: #FFC400;
+    box-shadow: 3px 3px 8px #b1b1b1,
+                -3px -3px 8px #fff;
+    transition: all 0.5s;
+}
+
+.signin-btn:hover {
+    background-color: #ffd54a;
+}
+
+.signin-btn:active {
+    cursor: not-allowed;
+    background-color: #ffde73;
+}
+
+.links {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+    font-size: 17px;
+    padding: 5px;
+}
