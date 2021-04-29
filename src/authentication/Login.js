@@ -37,7 +37,7 @@ export default function Login() {
       <Services />
       <Reviews />
 
-      <div className="auth-div">
+      <div className="auth-div m-0 p-0"> 
         <div className="logo">One Stop.</div>
         <div className="subtitle">Here dreams come true!</div>
         <div className="title">Login</div>
@@ -46,12 +46,10 @@ export default function Login() {
           <Form.Group id="email" className="email">
             <FaUserCircle className="icons" />
             <input type="email" ref={emailRef} required className="user-input" placeholder="Email" />
-            {/* <Form.Control type="email" ref={emailRef} required className="user-input" placeholder="Email"/> */}
           </Form.Group>
           <Form.Group id="password" className="password">
             <FaLock className="icons" />
             <input type="password" className="pass-input" placeholder="Password" ref={passwordRef} required />
-            {/* <Form.Control type="password" ref={passwordRef} required /> */}
           </Form.Group>
           <button disabled={loading} className="btns" type="submit">
             Log In

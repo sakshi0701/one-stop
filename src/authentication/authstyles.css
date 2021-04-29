@@ -66,6 +66,7 @@
     align-items: center;
     flex-direction: row;
     color: #555;
+    width: 100%;
     padding: 20px 10px 20px 5px;
 }
 
@@ -128,6 +129,10 @@
     background-color: #ffde73;
 }
 
+.btns a:hover {
+    text-decoration: none;
+}
+
 .links {
     padding: 20px;
     text-align: center;
@@ -143,4 +148,14 @@
     color: rgb(95, 95, 95);
     font-size: 17px;
     padding: 5px;
+}
+
+.auth-div .form-labels {
+    font-size: 18px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; */
+    color: #555;
+    padding: 20px 10px 5px 15px;
 }

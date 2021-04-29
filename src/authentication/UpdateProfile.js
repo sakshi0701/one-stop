@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react"
-import { Container, Form, Button, Card, Alert } from "react-bootstrap"
+import { Form, Alert } from "react-bootstrap"
+import { FaUserCircle, FaLock } from 'react-icons/fa'
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 
@@ -43,46 +44,51 @@ export default function UpdateProfile() {
 
   return (
     <>
-    <Container className="d-flex align-items-center justify-content-center mt-5">
-      <Card style={{ width: "70%" }}>
-        <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                ref={emailRef}
-                required
-                defaultValue={currentUser.email}
-              />
-            </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                ref={passwordRef}
-                placeholder="Leave blank to keep the same"
-              />
-            </Form.Group>
-            <Form.Group id="password-confirm">
-              <Form.Label>Password Confirmation</Form.Label>
-              <Form.Control
-                type="password"
-                ref={passwordConfirmRef}
-                placeholder="Leave blank to keep the same"
-              />
-            </Form.Group>
-            <Button disabled={loading} className="w-100 btn-info" type="submit">
-              Update
-            </Button>
-          </Form>
-        </Card.Body>
-      </Card>
-      </Container>
-      <div className="w-100 text-center mt-2">
-        <Link to="/">Cancel</Link>
+      <div className="auth-div">
+        <div className="logo">One Stop.</div>
+        <div className="subtitle">Here dreams come true!</div>
+        <div className="title">Update Profile</div>
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Form onSubmit={handleSubmit} className="fields">
+          <div className="form-labels">Email:</div>
+          <Form.Group id="email" className="email">
+            <FaUserCircle className="icons" />
+            <input
+              type="email"
+              ref={emailRef}
+              required
+              defaultValue={currentUser.email}
+              className="user-input"
+              placeholder="Email"
+            />
+          </Form.Group>
+          <div className="form-labels">Password:</div>
+          <Form.Group id="password" className="password">
+            <FaLock className="icons" />
+            <input
+              type="password"
+              ref={passwordRef}
+              className="pass-input"
+              placeholder="Leave blank to keep the same"
+            />
+          </Form.Group>
+          <div className="form-labels">Confirm Password:</div>
+          <Form.Group id="password-confirm" className="password">
+            <FaLock className="icons" />
+            <input
+              type="password"
+              ref={passwordConfirmRef}
+              className="pass-input"
+              placeholder="Leave blank to keep the same"
+            />
+          </Form.Group>
+          <button disabled={loading} className="btns" type="submit">
+            Update
+            </button>
+        </Form>
+        <div className="links">
+          <Link to="/">Cancel</Link>
+        </div>
       </div>
     </>
   )
