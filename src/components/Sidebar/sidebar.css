@@ -1,0 +1,146 @@
+.sidebar-menu {
+    margin-top: -530px;
+    align-self: flex-start;
+}
+
+input#menu {
+    display: none;
+    border-radius: 40px;
+}
+
+.icon {
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    padding: 16px;
+    width: 220x;
+}
+
+label.icon {
+    position: fixed;
+    z-index: 200;
+}
+
+.icon .menu,
+.icon .menu::before,
+.icon .menu::after {
+    background: #9fb1bd;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+    width: 18px;
+}
+
+#menu:checked + .icon .menu::after {
+    transform: rotate(-45deg);
+}
+
+#menu:checked + .icon .menu::before,
+#menu:checked + .icon .menu::after {
+    top: 0;
+    transition: top ease .3s, transform ease .3s .3s;
+}
+
+.nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    padding-top: 60px;
+    position: fixed;
+    transition: width ease .6s;
+    width: 50px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 400px) {
+    .nav{
+        height: 0vh;
+        border-radius: 50%;
+    }
+  }
+
+#menu:checked ~ .nav {
+    width: 220px;
+}
+
+.icon:hover .menu,
+.icon:hover .menu::before,
+.icon:hover .menu::after {
+    background: #FFC400;
+}
+
+.icon .menu {
+    left: 18px;
+    top: 27px;
+}
+
+.icon .menu::before {
+    top: -6px;
+}
+
+.icon .menu::after {
+    top: 6px;
+}
+
+#menu:checked + .icon .menu {
+    background: transparent;
+}
+
+#menu:checked + .icon .menu::before {
+    transform: rotate(45deg);
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li{
+    cursor: pointer;
+    display: flex;
+    line-height: 60px;
+    padding-left: 16px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    color: rgb(75, 75, 75);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.nav li a{
+    cursor: pointer;
+    display: flex;
+    line-height: 60px;
+    padding-left: 3px;
+    padding-bottom: 5px;
+    white-space: nowrap;
+    color: rgb(75, 75, 75);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.nav li a:hover {
+    text-decoration: none;
+}
+
+.nav li:hover {
+    background: #FFC400;
+    color: #fff;
+}
+
+.nav li:hover i{
+    color: #fff;
+}
+
+.nav i {
+    color: #9fb1bd;
+    margin-right: 24px;
+    vertical-align: text-bottom;
+}
+
+.nav li{
+    color: red;
+}
