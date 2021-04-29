@@ -1,4 +1,4 @@
-.container {
+.service-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
     margin: 30px;
 }
 
-.container h2 {
+.service-container h2 {
     width: 100%;
     text-align: center;
     color: #FFC400;
@@ -17,19 +17,19 @@
 }
 
 @media screen and (max-width: 560px) {
-    .container h2{
+    .service-container h2{
       font-size: 30px;
     }
   }
   
   @media screen and (max-width: 345px) {
-    .container h2{
+    .service-container h2{
       font-size: 25px;
     }
   }
 
-.container .card {
-    width: 35vh;
+.service-container .service-card {
+    width: 50vh;
     margin: 20px;
     padding: 40px 30px;
     background: #ebf5fe;
@@ -39,30 +39,31 @@
 }
 
 @media screen and (max-width: 560px) {
-    .container .card{
+    .service-container .service-card{
         width: 25vh;
     }
   }
 
-.container .card:hover {
+.service-container .service-card:hover {
     box-shadow: inset -6px -6px 10px rgba(255,255,255,0.5),
                 inset 6px 6px 20px rgba(0,0,0,0.05);
 }
 
-.container .card h3 {
+.service-container .service-card h3 {
     color: rgb(255, 196, 0);
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 500;
+    margin: 15px 0;
 }
 
 @media screen and (max-width: 560px) {
-    .container .card h3{
+    .service-container .service-card h3{
         font-size: 25px;
     }
   }
 
-.container .card p {
+.service-container .service-card p {
     color: rgb(110, 110, 110);
     font-family: 'Roboto', sans-serif;
 }

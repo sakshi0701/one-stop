@@ -7,9 +7,9 @@ import ReminderImg from './Images/reminder.svg'
 const Services = () => {
     return (
         <>
-            <div className="container">
+            <div className="service-container">
                 <h2>Services.</h2>
-                <div className="card">
+                <div className="service-card">
                     <div className="imgBox">
                         <img src={ChatsImg} alt="img"/>
                     </div>
@@ -19,7 +19,7 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className="card">
+                <div className="service-card">
                     <div className="imgBox">
                     <img src={FeatureImg} alt="img"/>
                     </div>
@@ -29,7 +29,7 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className="card">
+                <div className="service-card">
                     <div className="imgBox">
                     <img src={ReminderImg} alt="img"/>
                     </div>

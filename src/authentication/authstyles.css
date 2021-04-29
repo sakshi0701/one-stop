@@ -1,4 +1,4 @@
-.login-div {
+.auth-div {
     margin: 40px;
     width: 70%;
     /* height: 530px; */
@@ -41,9 +41,19 @@
     }
   }
 
+.auth-div .title {
+    width: 100%;
+    text-align: center;
+    color: #FFC400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
 .fields {
     width: 100%;
-    padding: 75px 5px 5px 5px;
+    padding: 40px 5px 5px 2px;
 }
 
 .fields input {
@@ -90,7 +100,10 @@
     }
   }
 
-.signin-btn {
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     outline: none;
     border: none;
     cursor: pointer;
@@ -100,18 +113,17 @@
     font-size: 20px;
     font-weight: 700;
     color: white;
-    text-align: center;
     background: #FFC400;
     box-shadow: 3px 3px 8px #b1b1b1,
                 -3px -3px 8px #fff;
     transition: all 0.5s;
 }
 
-.signin-btn:hover {
+.btns:hover {
     background-color: #ffd54a;
 }
 
-.signin-btn:active {
+.btns:active {
     cursor: not-allowed;
     background-color: #ffde73;
 }
