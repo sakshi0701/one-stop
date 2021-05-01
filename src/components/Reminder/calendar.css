@@ -1,0 +1,137 @@
+.reminder-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    border: 2px solid red;
+    position: relative;
+    top: -500px;
+}
+
+.event-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    /* min-height: 600px; */
+    background: #161a2b;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+  }
+  
+  .complete {
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
+  
+  .event-form {
+    margin-bottom: 32px;
+  }
+  
+  .event-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #5d0cff;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: rgb(58, 58, 58);
+  }
+  
+  .event-input::placeholder {
+    color: #797979;
+  }
+  
+  .event-button {
+    padding: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(
+      250deg,
+      #fd80a5,
+      #fc5185
+    );
+    color: #fff;
+    text-transform: capitalize;
+  }
+
+  .event-button:hover {
+    background: linear-gradient(
+        90deg,
+        orange 100%,
+        #fc5185 0%
+      );
+  }
+  
+  .event-input.edit {
+    border: 2px solid orange;
+  }
+  
+  .event-button.edit {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 118, 20, 1) 0%,
+      rgba(255, 84, 17, 1) 100%
+    );
+    padding: 16px 22px;
+  }
+  
+  .event-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  .event-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 118, 20, 1) 0%,
+      rgba(255, 84, 17, 1) 100%
+    );
+  
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+  }
+  
+  .event-row:nth-child(4n + 1) {
+    background: orange;
+  }
+  
+  .event-row:nth-child(4n + 2) {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 118, 20, 1) 0%,
+      rgba(255, 84, 17, 1) 100%
+    );
+  }
+  
+  .event-row:nth-child(4n + 3) {
+    background: orange;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    margin-right: 5px;
+    color: #fff;
+  }
+  
+  .edit-icon {
+    color: #fff;
+  }

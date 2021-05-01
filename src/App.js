@@ -9,6 +9,7 @@ import UpdateProfile from './authentication/UpdateProfile';
 import Signup from './authentication/Signup';
 import ForgotPassword from './authentication/ForgotPassword';
 import Profile from './components/Profile/Profile';
+import Reminder from './components/Reminder/Reminder';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <PrivateRoute exact path="/" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <PrivateRoute path="/profile" component={Profile} />
+              <PrivateRoute path="/your-events" exact component={Reminder}/>
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
@@ -44,15 +46,3 @@ function App() {
 }
 
 export default App;
-
-        {/* <Main />
-        <Services />
-        <Reviews />
-        <Login />
-      </div>
-      <div className="footer">
-        <FaFacebook className="follow-icon" />
-        <FaWhatsapp className="follow-icon" />
-        <FaTwitter className="follow-icon" />
-        <FaInstagram className="follow-icon" />
-      </div> */}
