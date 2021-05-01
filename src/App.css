@@ -53,8 +53,8 @@ body {
     border-radius: 40px;
     padding: 15px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    /* flex-direction: column; */
     align-items: center;
     z-index: 100000;
   }

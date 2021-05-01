@@ -42,7 +42,7 @@ function EventForm(props) {
       ) : (
         <>
           <input
-            placeholder='Add a todo'
+            placeholder='Add an event!'
             value={input}
             onChange={handleChange}
             name='text'
@@ -50,7 +50,7 @@ function EventForm(props) {
             ref={inputRef}
           />
           <button onClick={handleSubmit} className='event-button'>
-            Add todo
+            Add event
           </button>
         </>
       )}

@@ -33,31 +33,34 @@ export default function Login() {
 
   return (
     <>
-      <Main />
-      <Services />
-      <Reviews />
-
-      <div className="auth-div m-0 p-0"> 
-        <div className="logo">One Stop.</div>
-        <div className="subtitle">Here dreams come true!</div>
-        <div className="title">Login</div>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={handleSubmit} className="fields">
-          <Form.Group id="email" className="email">
-            <FaUserCircle className="icons" />
-            <input type="email" ref={emailRef} required className="user-input" placeholder="Email" />
-          </Form.Group>
-          <Form.Group id="password" className="password">
-            <FaLock className="icons" />
-            <input type="password" className="pass-input" placeholder="Password" ref={passwordRef} required />
-          </Form.Group>
-          <button disabled={loading} className="btns" type="submit">
-            Log In
+      <div className="front-center">
+        <Main />
+        <Services />
+        <Reviews />
+        <div className="center">
+        <div className="auth-div m-0 p-0">
+          <div className="logo">One Stop.</div>
+          <div className="subtitle">Here dreams come true!</div>
+          <div className="title">Login</div>
+          {error && <Alert variant="danger">{error}</Alert>}
+          <Form onSubmit={handleSubmit} className="fields">
+            <Form.Group id="email" className="email">
+              <FaUserCircle className="icons" />
+              <input type="email" ref={emailRef} required className="user-input" placeholder="Email" />
+            </Form.Group>
+            <Form.Group id="password" className="password">
+              <FaLock className="icons" />
+              <input type="password" className="pass-input" placeholder="Password" ref={passwordRef} required />
+            </Form.Group>
+            <button disabled={loading} className="btns" type="submit">
+              Log In
             </button>
-        </Form>
-        <div className="links">
-          <Link to="/forgot-password">Forgot Password?</Link><br />
+          </Form>
+          <div className="links">
+            <Link to="/forgot-password">Forgot Password?</Link><br />
                 Do not have an accout? <Link to="/signup">Sign Up!</Link>
+          </div>
+        </div>
         </div>
       </div>
     </>

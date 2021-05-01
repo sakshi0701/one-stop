@@ -1,3 +1,9 @@
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .auth-div {
     margin: 40px;
     width: 70%;

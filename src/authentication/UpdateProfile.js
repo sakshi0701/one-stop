@@ -44,6 +44,7 @@ export default function UpdateProfile() {
 
   return (
     <>
+    <div className="center">
       <div className="auth-div">
         <div className="logo">One Stop.</div>
         <div className="subtitle">Here dreams come true!</div>
@@ -89,6 +90,7 @@ export default function UpdateProfile() {
         <div className="links">
           <Link to="/">Cancel</Link>
         </div>
+      </div>
       </div>
     </>
   )

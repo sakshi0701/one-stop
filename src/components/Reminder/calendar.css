@@ -3,21 +3,25 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* min-height: 100vh; */
-    border: 2px solid red;
-    position: relative;
-    top: -500px;
+}
+
+.reminder-title {
+  color: #FFC400;
+  font-size: 48px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-self: flex-start;
 }
 
 .event-app {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    width: 520px;
-    /* min-height: 600px; */
+    /* width: 520px; */
     background: #161a2b;
     text-align: center;
-    margin: 128px auto;
+    /* margin: 128px auto; */
     border-radius: 10px;
     padding-bottom: 32px;
   }
@@ -34,11 +38,13 @@
   .event-input {
     padding: 14px 32px 14px 16px;
     border-radius: 4px 0 0 4px;
-    border: 2px solid #5d0cff;
+    border: none;
     outline: none;
     width: 320px;
     background: transparent;
     color: rgb(58, 58, 58);
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #fff;
   }
   
   .event-input::placeholder {
@@ -51,21 +57,17 @@
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     outline: none;
-    background: linear-gradient(
-      250deg,
-      #fd80a5,
-      #fc5185
-    );
-    color: #fff;
+    background: #ebf5fe;
+    color: #FFC400;
+    font-weight: 700;
     text-transform: capitalize;
+    box-shadow: -6px -6px 20px rgba(255,255,255,1),
+    6px 6px 20px rgba(0,0,0,0.1);
   }
 
   .event-button:hover {
-    background: linear-gradient(
-        90deg,
-        orange 100%,
-        #fc5185 0%
-      );
+    box-shadow: inset -6px -6px 10px rgba(255,255,255,0.5),
+                inset 6px 6px 20px rgba(0,0,0,0.05);
   }
   
   .event-input.edit {
@@ -91,36 +93,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 4px auto;
-    color: #fff;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 118, 20, 1) 0%,
-      rgba(255, 84, 17, 1) 100%
-    );
-  
+    margin: 10px auto;
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #fff;
     padding: 16px;
     border-radius: 5px;
     width: 90%;
+    color: #FFC400;
+    font-weight: 700;
+    border: 0.5px solid #FFC400;
+    background: #fdfcfa;
   }
   
-  .event-row:nth-child(4n + 1) {
-    background: orange;
-  }
-  
-  .event-row:nth-child(4n + 2) {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 118, 20, 1) 0%,
-      rgba(255, 84, 17, 1) 100%
-    );
-  }
-  
-  .event-row:nth-child(4n + 3) {
-    background: orange;
-  }
-  
-  .icons {
+.icons {
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -129,9 +114,9 @@
   
   .delete-icon {
     margin-right: 5px;
-    color: #fff;
+    color: red;
   }
   
   .edit-icon {
-    color: #fff;
+    color: #FFC400;
   }

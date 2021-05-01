@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Card, Alert } from "react-bootstrap"
 import { useAuth } from "../../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import Sidebar from '../Sidebar/Sidebar'
 import './profile.css';
 
 export default function Profile() {
@@ -42,6 +43,7 @@ export default function Profile() {
 
     return (
         <>
+        <Sidebar />
             <div className="profile">
                 <div className="profile-title"> Your Profile</div>
                 <div>

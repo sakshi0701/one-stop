@@ -7,8 +7,10 @@ const Reminder = () => {
     return (
         <>
             <Sidebar />
-            <div className="reminder-app">
-                <EventList />
+            <div className="center">
+                <div className="reminder-app">
+                    <EventList />
+                </div>
             </div>
         </>
     )

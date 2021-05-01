@@ -41,7 +41,7 @@ function EventList() {
 
   return (
     <>
-      <h1 className="m-3">Reminders</h1>
+      <h1 className="reminder-title m-3">Reminders</h1>
       <EventForm onSubmit={addEvent} />
       <Event
         events={events}

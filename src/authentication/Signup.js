@@ -34,30 +34,32 @@ export default function Signup() {
 
   return (
     <>
-      <div className="auth-div">
-        <div className="logo">One Stop.</div>
-        <div className="subtitle">Here dreams come true!</div>
-        <div className="title">Sign Up</div>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={handleSubmit} className="fields">
-          <Form.Group id="email" className="email">
-            <FaUserCircle className="icons" />
-            <input type="email" ref={emailRef} required className="user-input" placeholder="Email" />
-          </Form.Group>
-          <Form.Group id="password" className="password">
-            <FaLock className="icons" />
-            <input type="password" className="pass-input" placeholder="Password" ref={passwordRef} required />
-          </Form.Group>
-          <Form.Group id="password-confirm" className="password">
-            <FaLock className="icons" />
-            <input type="password" className="pass-input" placeholder="Confirm Password" ref={passwordRef} required />
-          </Form.Group>
-          <button disabled={loading} className="btns" type="submit">
-            Sign Up
+      <div className="center">
+        <div className="auth-div">
+          <div className="logo">One Stop.</div>
+          <div className="subtitle">Here dreams come true!</div>
+          <div className="title">Sign Up</div>
+          {error && <Alert variant="danger">{error}</Alert>}
+          <Form onSubmit={handleSubmit} className="fields">
+            <Form.Group id="email" className="email">
+              <FaUserCircle className="icons" />
+              <input type="email" ref={emailRef} required className="user-input" placeholder="Email" />
+            </Form.Group>
+            <Form.Group id="password" className="password">
+              <FaLock className="icons" />
+              <input type="password" className="pass-input" placeholder="Password" ref={passwordRef} required />
+            </Form.Group>
+            <Form.Group id="password-confirm" className="password">
+              <FaLock className="icons" />
+              <input type="password" className="pass-input" placeholder="Confirm Password" ref={passwordRef} required />
+            </Form.Group>
+            <button disabled={loading} className="btns" type="submit">
+              Sign Up
             </button>
-        </Form>
-        <div className="links">
-          Already have an account? <Link to="/login">Log In</Link>
+          </Form>
+          <div className="links">
+            Already have an account? <Link to="/login">Log In</Link>
+          </div>
         </div>
       </div>
     </>
