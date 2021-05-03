@@ -1,0 +1,95 @@
+.chat-page {
+    height: 100vh;
+    padding: 0;
+    margin-left: 50px;
+}
+
+/* -------------------------------------------------------- */
+
+.side {
+    width: 310px;
+}
+
+@media screen and (max-width: 280px) {
+    .side {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .side {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .side {
+      width: 110px;  
+    }
+}
+
+/* @media screen and (max-width: 590px) {
+    .side {
+        width: 200px;
+    }
+} */
+
+/* -------------------------------------------------------- */
+
+.left {
+    margin-left: 200px;
+    height: 100vh;
+}
+
+@media screen and (max-width: 590px) {
+    .left {
+      margin-left: 230px;  
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .left {
+      margin-left: 10px;  
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .left {
+      margin-left: 50px;  
+    }
+}
+
+/* -------------------------------------------------------- */
+
+.list-group-item+.list-group-item.active {
+    margin-top: -1px;
+    border-top-width: 1px;
+    background: orange;
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: orange;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: orange;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(221, 220, 220);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:  rgb(255, 145, 0);
+    background: linear-gradient(#fc5185,orange);
+    border-radius: 25px;
+  }
