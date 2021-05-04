@@ -1,6 +1,6 @@
 import React from 'react';
 import './sidebar.css';
-import { FaTshirt, FaShoppingCart, FaBell, FaUserCircle } from "react-icons/fa";
+import { FaMobileAlt, FaShoppingCart, FaBell, FaUserCircle } from "react-icons/fa";
 import { BsFillChatDotsFill } from "react-icons/bs";
 
 const Navbar = () => {
@@ -11,16 +11,16 @@ const Navbar = () => {
                     <div class="menu"></div>
                 </label>
 
-                <div className="nav">
+                <div className="side-nav">
                     <ul>
                     <li>
-                        <a href="/"><i class="material-icons"><FaTshirt /></i>Trending and Offers</a>
-                    </li>
-                    <li>
-                        <a href="/chat"><i class="material-icons"><BsFillChatDotsFill /></i>Chats</a>
+                        <a href="/"><i class="material-icons"><FaMobileAlt /></i>Trending and Offers</a>
                     </li>
                     <li>
                         <a href="/cart"><i class="material-icons"><FaShoppingCart /></i>Cart</a>
+                    </li>
+                    <li>
+                        <a href="/chat"><i class="material-icons"><BsFillChatDotsFill /></i>Chats</a>
                     </li>
                     <li>
                         <a href="/your-events"><i class="material-icons"><FaBell /></i>Event Reminder</a>

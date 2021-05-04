@@ -2,7 +2,15 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  /* html {
+    scroll-behavior: smooth;
+  } */
   
+  .content{
+    cursor: url('./components/Front/Services/Images/chatsImage.svg');
+  }
+
   .bg {
     background: linear-gradient(#FFC400 50%, white 50%);
     padding: 30px 50px;
@@ -14,33 +22,31 @@ body {
     z-index: -1;
   }
   
-  /* @media screen and (max-width: 560px) {
-    .bg{
-      padding: 0px 50px;
-    }
-  } */
-  
   .title {
     width: 100%;
     margin: 0;
   }
   
-  .title h1 {
+  .title h1 a {
     color: white;
     font-size: 75px;
     margin: 0;
     font-family: 'Orelega One', cursive;
     font-weight: 500;
   }
+
+  .title h1 a:hover {
+    text-decoration: none;
+  }
   
   @media screen and (max-width: 560px) {
-    .title h1{
+    .title h1 a{
       font-size: 50px;
     }
   }
   
   @media screen and (max-width: 345px) {
-    .title h1{
+    .title h1 a{
       font-size: 35px;
     }
   }
@@ -56,7 +62,7 @@ body {
     justify-content: space-between;
     /* flex-direction: column; */
     align-items: center;
-    z-index: 100000;
+    z-index: 100;
   }
   
   .footer {

@@ -16,7 +16,7 @@ export default function NewContactModal({ closeModal }) {
 
   return (
     <>
-      <Modal.Header closeButton>Create Contact</Modal.Header>
+      <Modal.Header className="z-index-100" closeButton>Create Contact</Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
           <Form.Group>

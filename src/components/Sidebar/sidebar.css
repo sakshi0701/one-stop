@@ -1,5 +1,4 @@
 .sidebar-menu {
-    /* position: relative; */
     margin-top: -5px;
     align-self: flex-start;
 }
@@ -44,7 +43,7 @@ label.icon {
     transition: top ease .3s, transform ease .3s .3s;
 }
 
-.nav {
+.side-nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 100vh;
     padding-top: 60px;
@@ -57,13 +56,12 @@ label.icon {
 }
 
 @media screen and (max-width: 400px) {
-    .nav{
-        height: 0vh;
+    .side-nav{
         border-radius: 50%;
     }
   }
 
-#menu:checked ~ .nav {
+#menu:checked ~ .side-nav {
     width: 220px;
 }
 
@@ -94,13 +92,13 @@ label.icon {
     transform: rotate(45deg);
 }
 
-.nav ul {
+.side-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.nav li{
+.side-nav li{
     cursor: pointer;
     display: flex;
     line-height: 60px;
@@ -112,7 +110,7 @@ label.icon {
     font-weight: bolder;
 }
 
-.nav li a{
+.side-nav li a{
     cursor: pointer;
     display: flex;
     line-height: 60px;
@@ -124,25 +122,21 @@ label.icon {
     font-weight: bolder;
 }
 
-.nav li a:hover {
+.side-nav li a:hover {
     text-decoration: none;
 }
 
-.nav li:hover {
+.side-nav li:hover {
     background: #FFC400;
     color: #fff;
 }
 
-.nav li:hover i{
+.side-nav li:hover i{
     color: #fff;
 }
 
-.nav i {
+.side-nav i {
     color: #9fb1bd;
     margin-right: 24px;
     vertical-align: text-bottom;
-}
-
-.nav li{
-    color: red;
 }

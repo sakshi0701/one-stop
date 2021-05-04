@@ -10,13 +10,16 @@ import Signup from './authentication/Signup';
 import ForgotPassword from './authentication/ForgotPassword';
 import Profile from './components/Profile/Profile';
 import Reminder from './components/Reminder/Reminder';
+import Cart from './components/Cart/Cart';
+import Details from './components/Details/Details';
+import Chat from './components/Chat/client/components/Chat';
 import './App.css';
 
 function App() {
   return (
     <div className="bg">
       <div className="title">
-        <h1>One Stop.</h1>
+        <h1><a href="/">One Stop.</a></h1>
       </div>
       <div className="App">
 
@@ -27,6 +30,9 @@ function App() {
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <PrivateRoute path="/profile" component={Profile} />
               <PrivateRoute path="/your-events" exact component={Reminder}/>
+              <PrivateRoute path="/cart" component={Cart} />
+              <PrivateRoute path="/details" component={Details} />
+              <PrivateRoute path="/chat" exact component={Chat}/>
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />

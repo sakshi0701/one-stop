@@ -1,24 +1,29 @@
 .chat-page {
     height: 100vh;
+    width: 100%;
     padding: 0;
-    margin-left: 50px;
+    margin: 0;
+    display: flex;
 }
 
 /* -------------------------------------------------------- */
 
 .side {
     width: 310px;
+    flex-grow: 0;
+    overflow-y: auto;
+    overflow: hidden;
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 590px) {
     .side {
-        width: 110px;
+      width: 200px;  
     }
 }
 
 @media screen and (max-width: 480px) {
     .side {
-        width: 120px;
+        width: 100px;
     }
 }
 
@@ -28,34 +33,27 @@
     }
 }
 
-/* @media screen and (max-width: 590px) {
-    .side {
-        width: 200px;
-    }
-} */
-
-/* -------------------------------------------------------- */
-
 .left {
     margin-left: 200px;
+    flex-grow: 1;
     height: 100vh;
 }
 
 @media screen and (max-width: 590px) {
     .left {
-      margin-left: 230px;  
+      margin-left: 90px;  
     }
 }
 
 @media screen and (max-width: 480px) {
     .left {
-      margin-left: 10px;  
+      margin-left: 0px;  
     }
 }
 
 @media screen and (max-width: 280px) {
     .left {
-      margin-left: 50px;  
+      margin-left: 0;  
     }
 }
 
@@ -67,7 +65,8 @@
     background: orange;
 }
 
-.list-group-item.active {
+.list-group-item.active,
+.list-group-item-action {
     z-index: 2;
     color: #fff;
     background-color: orange;
@@ -78,18 +77,3 @@
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff;
 }
-
-/* SCROLL BAR */
-::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: rgb(221, 220, 220);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background:  rgb(255, 145, 0);
-    background: linear-gradient(#fc5185,orange);
-    border-radius: 25px;
-  }
