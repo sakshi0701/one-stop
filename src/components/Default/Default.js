@@ -10,7 +10,7 @@ const Default = () => {
             Page Not Found!
             </div>
             <div className="default-icon">
-                <img src={Icon} />
+                <img src={Icon} alt="page-not-found"/>
             </div>
         </div>
         </>

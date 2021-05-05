@@ -6,10 +6,6 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
-    function getData(e) {
-        e.preventDefault();
-    }
-
     return (
         <div className="sidebar-menu">
             <input type="checkbox" id="menu" />
