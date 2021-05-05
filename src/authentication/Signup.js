@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react"
-// import { Form, Alert } from "react-bootstrap"
-import { Form, Button, Card, Alert } from "react-bootstrap"
+import { Form, Alert } from "react-bootstrap"
 
 import { FaUserCircle, FaLock } from 'react-icons/fa'
 import { useAuth } from "../contexts/AuthContext"
