@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react"
-import { Form, Alert } from "react-bootstrap"
+// import { Form, Alert } from "react-bootstrap"
+import { Form, Button, Card, Alert } from "react-bootstrap"
+
 import { FaUserCircle, FaLock } from 'react-icons/fa'
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
@@ -51,8 +53,9 @@ export default function Signup() {
             </Form.Group>
             <Form.Group id="password-confirm" className="password">
               <FaLock className="icons" />
-              <input type="password" className="pass-input" placeholder="Confirm Password" ref={passwordRef} required />
+              <input type="password" className="pass-input" placeholder="Confirm Password" ref={passwordConfirmRef} required />
             </Form.Group>
+
             <button disabled={loading} className="btns" type="submit">
               Sign Up
             </button>
