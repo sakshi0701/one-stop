@@ -32,7 +32,7 @@ export default function UpdateProfile() {
 
     Promise.all(promises)
       .then(() => {
-        history.push("/")
+        history.push("/profile")
       })
       .catch(() => {
         setError("Failed to update account")
@@ -88,7 +88,7 @@ export default function UpdateProfile() {
             </button>
         </Form>
         <div className="links">
-          <Link to="/">Cancel</Link>
+          <Link to="/profile">Cancel</Link>
         </div>
       </div>
       </div>

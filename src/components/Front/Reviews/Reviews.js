@@ -4,8 +4,8 @@ import './reviews.css'
 const Reviews = () => {
     return (
         <>
-        <div className="review-title">Reviews.</div>
-            <div className="reviews m-0 p-0">
+        <div className="review-title m-2">Reviews.</div>
+            <div className="reviews m-3">
 
                 <div className="review-card">
                     <div className="review-main">

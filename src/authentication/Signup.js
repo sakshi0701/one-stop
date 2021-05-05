@@ -35,7 +35,7 @@ export default function Signup() {
   return (
     <>
       <div className="center">
-        <div className="auth-div">
+        <div className="auth-div m-4 p-2">
           <div className="logo">One Stop.</div>
           <div className="subtitle">Here dreams come true!</div>
           <div className="title">Sign Up</div>

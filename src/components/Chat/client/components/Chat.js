@@ -2,7 +2,6 @@ import React from 'react'
 import Login from './Login'
 import useLocalStorage from '../hooks/useLocalStorage';
 import Dashboard from './Dashboard'
-import Sidebar from '../../../Sidebar/Sidebar'
 import { ContactsProvider } from '../contexts/ContactsProvider'
 import { ConversationsProvider } from '../contexts/ConversationsProvider';
 import { SocketProvider } from '../contexts/SocketProvider';
@@ -23,7 +22,6 @@ function Chat() {
 
   return (
     <>
-    {/* <Sidebar /> */}
     <div className="chat-page">
       {id ? dashboard : <Login onIdSubmit={setId} />}
     </div>

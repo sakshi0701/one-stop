@@ -2,10 +2,6 @@ body {
     margin: 0;
     padding: 0;
   }
-
-  /* html {
-    scroll-behavior: smooth;
-  } */
   
   .content{
     cursor: url('./components/Front/Services/Images/chatsImage.svg');
@@ -20,6 +16,12 @@ body {
     align-items: center;
     flex-direction: column;
     z-index: -1;
+  }
+
+  @media screen and (max-width: 560px) {
+    .bg{
+      padding: 10px;
+    }
   }
   
   .title {

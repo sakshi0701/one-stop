@@ -17,7 +17,7 @@ export default function ProductItem({ product }) {
   const { addItemToCart } = cartActions;
   const { modalActions } = useModalState();
   const { openModal } = modalActions;
-  
+
   return (
     <Product className="col-9 mx-auto col-md-6 col-lg-3 my-3">
       <div className="card">
@@ -41,7 +41,7 @@ export default function ProductItem({ product }) {
                 In Cart
               </p>
             ) : (
-              <FaShoppingCart/>
+              <FaShoppingCart />
             )}
           </button>
         </div>
@@ -68,12 +68,23 @@ ProductItem.propTypes = {
 
 const Product = styled.div`
   .card {
+    width: 250px;
     background: #ebf5fe;
     border-color: transparent;
     transition: all 0.5s linear;
     border-radius: 40px;
     box-shadow: -6px -6px 20px rgba(255,255,255,1),
                 6px 6px 20px rgba(0,0,0,0.1);
+
+    @media screen and (max-width: 420px) {
+      margin-left: -40px;
+    }
+    
+    @media screen and (max-width: 280px) {
+      margin-left: -45px;
+      width: 200px;
+    }
+
   }
 
   .card-footer {

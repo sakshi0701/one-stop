@@ -13,6 +13,12 @@
     font-weight: bold;
 }
 
+@media screen and (max-width: 560px) {
+    .profile-title {
+        font-size: 45px;
+    }
+  }
+
 .profileImg-area {
     display: flex;
     flex-direction: column;
@@ -20,6 +26,12 @@
     margin: 20px;
     border: 2px solid #FFC400;
 }
+
+@media screen and (max-width: 560px) {
+    .profileImg-area {
+        width: auto;
+    }
+  }
 
 .errorMsg {
     color: red;

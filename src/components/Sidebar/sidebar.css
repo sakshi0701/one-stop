@@ -55,12 +55,6 @@ label.icon {
     overflow: hidden;
 }
 
-@media screen and (max-width: 400px) {
-    .side-nav{
-        border-radius: 50%;
-    }
-  }
-
 #menu:checked ~ .side-nav {
     width: 220px;
 }

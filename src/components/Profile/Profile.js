@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Card, Alert } from "react-bootstrap"
+import { Alert } from "react-bootstrap"
 import { useAuth } from "../../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import Sidebar from '../Sidebar/Sidebar'
@@ -73,25 +73,23 @@ export default function Profile() {
                         )}
                     </div>
                 </div>
-                <Card className="mt-4 mb-5 w-10 update-card">
-                    <Card.Body>
-                        {error && <Alert variant="danger">{error}</Alert>}
+                <div className="d-flex flex-column center">
+                {error && <Alert variant="danger">{error}</Alert>}
                         <div className="fields">
                             <div className="email profile-email"><strong>Email:  </strong> {currentUser.email}</div>
                         </div>
                         <div className="links">
-                            <Link to="/update-profile" className="btn btn-warning w-100 mt-3">
+                            <Link to="/update-profile" className="btns">
                                 Update Profile
                             </Link>
                         </div>
 
                         <div className="w-100 text-center mt-2">
-                            <button variant="link" onClick={handleLogout} className="btns">
+                            <button variant="link" onClick={handleLogout} className="btn btn-warning w-10 mt-3">
                                 Log Out
-              </button>
+                            </button>
                         </div>
-                    </Card.Body>
-                </Card>
+                </div>
             </div>
         </>
     )
