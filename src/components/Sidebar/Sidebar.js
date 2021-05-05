@@ -2,8 +2,14 @@ import React from 'react';
 import './sidebar.css';
 import { FaMobileAlt, FaShoppingCart, FaBell, FaUserCircle } from "react-icons/fa";
 import { BsFillChatDotsFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+    function getData(e) {
+        e.preventDefault();
+    }
+
     return (
         <div className="sidebar-menu">
             <input type="checkbox" id="menu" />
@@ -14,19 +20,19 @@ const Navbar = () => {
             <div className="side-nav">
                 <ul>
                     <li>
-                        <a href="/"><i class="material-icons"><FaMobileAlt /></i>Trending and Offers</a>
+                        <Link to="/"><i class="material-icons"><FaMobileAlt /></i>Trending and Offers</Link>
                     </li>
                     <li>
-                        <a href="/cart"><i class="material-icons"><FaShoppingCart /></i>Cart</a>
+                        <Link to="/cart"><i class="material-icons"><FaShoppingCart /></i>Cart</Link>
                     </li>
                     <li>
-                        <a href="/chat"><i class="material-icons"><BsFillChatDotsFill /></i>Chats</a>
+                        <Link to="/chat"><i class="material-icons"><BsFillChatDotsFill /></i>Chats</Link>
                     </li>
                     <li>
-                        <a href="/your-events"><i class="material-icons"><FaBell /></i>Event Reminder</a>
+                        <Link to="/your-events"><i class="material-icons"><FaBell /></i>Event Reminder</Link>
                     </li>
                     <li>
-                        <a href="/profile"><i class="material-icons"><FaUserCircle /></i> Account</a>
+                        <Link to="/profile"><i class="material-icons"><FaUserCircle /></i> Account</Link>
                     </li>
                 </ul>
             </div>

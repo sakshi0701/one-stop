@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import PrivateRoute from './authentication/PrivateRoute';
 import { FaFacebook, FaWhatsapp, FaTwitter, FaInstagram } from 'react-icons/fa'
@@ -21,42 +21,44 @@ import './App.css';
 function App() {
 
   useEffect(() => {
-    Aos.init({duration: 2000});
+    Aos.init({ duration: 2000 });
   }, []);
 
   return (
-    <div className="bg">
-      <div className="title">
-        <h1><a href="/">One Stop.</a></h1>
-      </div>
-      <div className="App">
+    <>
+      <Router>
+        <div className="bg" >
+          <div className="title">
+            <h1><Link to="/">One Stop.</Link></h1>
+          </div>
+          <div className="App">
 
-        <Router>
-          <AuthProvider>
-            <Switch>
-              <PrivateRoute exact path="/" component={Dashboard} />
-              <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <PrivateRoute path="/profile" component={Profile} />
-              <PrivateRoute path="/your-events" exact component={Reminder}/>
-              <PrivateRoute path="/cart" component={Cart} />
-              <PrivateRoute path="/details" component={Details} />
-              <PrivateRoute path="/chat" exact component={Chat}/>
-              <Route path="/signup" component={Signup} />
-              <Route path="/login" component={Login} />
-              <Route path="/forgot-password" component={ForgotPassword} />
-              <Route component={Default} />
-            </Switch>
-          </AuthProvider>
-        </Router>
+            <AuthProvider>
+              <Switch>
+                <PrivateRoute exact path="/" component={Dashboard} />
+                <PrivateRoute path="/update-profile" component={UpdateProfile} />
+                <PrivateRoute path="/profile" component={Profile} />
+                <PrivateRoute path="/your-events" exact component={Reminder} />
+                <PrivateRoute path="/cart" component={Cart} />
+                <PrivateRoute path="/details" component={Details} />
+                <PrivateRoute path="/chat" exact component={Chat} />
+                <Route path="/signup" component={Signup} />
+                <Route path="/login" component={Login} />
+                <Route path="/forgot-password" component={ForgotPassword} />
+                <Route component={Default} />
+              </Switch>
+            </AuthProvider>
 
-        </div>
-        <div className="footer" >
-        <FaFacebook className="follow-icon"/>
-        <FaWhatsapp className="follow-icon" />
-        <FaTwitter className="follow-icon" />
-        <FaInstagram className="follow-icon" />
-      </div>
-    </div>
+          </div>
+          <div className="footer" >
+            <FaFacebook className="follow-icon" />
+            <FaWhatsapp className="follow-icon" />
+            <FaTwitter className="follow-icon" />
+            <FaInstagram className="follow-icon" />
+          </div>
+        </div >
+      </Router>
+    </>
   );
 }
 
