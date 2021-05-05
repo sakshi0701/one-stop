@@ -15,6 +15,7 @@ import Reminder from './components/Reminder/Reminder';
 import Cart from './components/Cart/Cart';
 import Details from './components/Details/Details';
 import Chat from './components/Chat/client/components/Chat';
+import Default from './components/Default/Default';
 import './App.css';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
+              <Route component={Default} />
             </Switch>
           </AuthProvider>
         </Router>

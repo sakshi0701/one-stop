@@ -1,0 +1,37 @@
+.default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: transparent;
+}
+
+.default-heading {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #FFC400;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 450px) {
+    .default-heading {
+        font-size: 50px;
+    }
+  }
+
+.default-icon {
+    display: flex;
+    justify-content: space-around;
+    height: 260px;
+    width: 260px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    .default-icon{
+        height: 100px;
+        width: 100px;
+    }
+  }
