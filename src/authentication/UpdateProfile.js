@@ -44,53 +44,53 @@ export default function UpdateProfile() {
 
   return (
     <>
-    <div className="center">
-      <div className="auth-div">
-        <div className="logo">One Stop.</div>
-        <div className="subtitle">Here dreams come true!</div>
-        <div className="title">Update Profile</div>
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={handleSubmit} className="fields">
-          <div className="form-labels">Email:</div>
-          <Form.Group id="email" className="email">
-            <FaUserCircle className="icons" />
-            <input
-              type="email"
-              ref={emailRef}
-              required
-              defaultValue={currentUser.email}
-              className="user-input"
-              placeholder="Email"
-            />
-          </Form.Group>
-          <div className="form-labels">Password:</div>
-          <Form.Group id="password" className="password">
-            <FaLock className="icons" />
-            <input
-              type="password"
-              ref={passwordRef}
-              className="pass-input"
-              placeholder="Leave blank to keep the same"
-            />
-          </Form.Group>
-          <div className="form-labels">Confirm Password:</div>
-          <Form.Group id="password-confirm" className="password">
-            <FaLock className="icons" />
-            <input
-              type="password"
-              ref={passwordConfirmRef}
-              className="pass-input"
-              placeholder="Leave blank to keep the same"
-            />
-          </Form.Group>
-          <button disabled={loading} className="btns" type="submit">
-            Update
+      <div className="center">
+        <div className="auth-div m-2">
+          <div className="logo">One Stop.</div>
+          <div className="subtitle">Here dreams come true!</div>
+          <div className="title">Update Profile</div>
+          {error && <Alert variant="danger">{error}</Alert>}
+          <Form onSubmit={handleSubmit} className="fields">
+            <div className="form-labels">Email:</div>
+            <Form.Group id="email" className="email">
+              <FaUserCircle className="icons" />
+              <input
+                type="email"
+                ref={emailRef}
+                required
+                defaultValue={currentUser.email}
+                className="user-input"
+                placeholder="Email"
+              />
+            </Form.Group>
+            <div className="form-labels">Password:</div>
+            <Form.Group id="password" className="password">
+              <FaLock className="icons" />
+              <input
+                type="password"
+                ref={passwordRef}
+                className="pass-input"
+                placeholder="Leave blank to keep the same"
+              />
+            </Form.Group>
+            <div className="form-labels">Confirm Password:</div>
+            <Form.Group id="password-confirm" className="password">
+              <FaLock className="icons" />
+              <input
+                type="password"
+                ref={passwordConfirmRef}
+                className="pass-input"
+                placeholder="Leave blank to keep the same"
+              />
+            </Form.Group>
+            <button disabled={loading} className="btns" type="submit">
+              Update
             </button>
-        </Form>
-        <div className="links">
-          <Link to="/profile">Cancel</Link>
+          </Form>
+          <div className="links">
+            <Link to="/profile">Cancel</Link>
+          </div>
         </div>
-      </div>
       </div>
     </>
   )

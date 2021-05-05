@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import PrivateRoute from './authentication/PrivateRoute';
@@ -16,6 +18,11 @@ import Chat from './components/Chat/client/components/Chat';
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+    Aos.init({duration: 2000});
+  }, []);
+
   return (
     <div className="bg">
       <div className="title">
@@ -41,13 +48,13 @@ function App() {
         </Router>
 
         </div>
-        <div className="footer">
-        <FaFacebook className="follow-icon" />
+        <div className="footer" >
+        <FaFacebook className="follow-icon"/>
         <FaWhatsapp className="follow-icon" />
         <FaTwitter className="follow-icon" />
         <FaInstagram className="follow-icon" />
       </div>
-        </div>
+    </div>
   );
 }
 

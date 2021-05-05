@@ -86,3 +86,18 @@ body {
     color: #FFC400;
     cursor: pointer;
   }
+
+  /* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ebf5fc;
+}
+
+::-webkit-scrollbar-thumb {
+  background:  #b8b8b8;
+  /* border: 0.5px solid white; */
+  border-radius: 25px;
+}

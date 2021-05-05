@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -10,6 +12,11 @@ import {
 import { FaShoppingCart } from "react-icons/fa";
 
 export default function ProductItem({ product }) {
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const { id, title, img, price, inCart } = product;
   const { productActions } = useProductState();
   const { setProductDetails } = productActions;
@@ -20,7 +27,7 @@ export default function ProductItem({ product }) {
 
   return (
     <Product className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-      <div className="card">
+      <div className="card " data-aos="fade-up">
         <div
           className="img-container p-5"
           onClick={() => setProductDetails(product)}

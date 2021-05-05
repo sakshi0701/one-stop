@@ -7,12 +7,12 @@ const Navbar = () => {
     return (
         <div className="sidebar-menu">
             <input type="checkbox" id="menu" />
-                <label for="menu" class="icon">
-                    <div class="menu"></div>
-                </label>
+            <label for="menu" class="icon">
+                <div class="menu"></div>
+            </label>
 
-                <div className="side-nav">
-                    <ul>
+            <div className="side-nav">
+                <ul>
                     <li>
                         <a href="/"><i class="material-icons"><FaMobileAlt /></i>Trending and Offers</a>
                     </li>
@@ -28,8 +28,8 @@ const Navbar = () => {
                     <li>
                         <a href="/profile"><i class="material-icons"><FaUserCircle /></i> Account</a>
                     </li>
-                    </ul>
-                </div>
+                </ul>
+            </div>
         </div>
     )
 }
